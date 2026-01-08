@@ -1870,19 +1870,25 @@ function App() {
         >
           <div style={{ fontSize: '4rem' }}>🎮</div>
           <h2 style={{ fontSize: '2rem', margin: 0, color: '#fff' }}>ZipperMerge</h2>
-          <button
-            onClick={initializeAudio}
-            style={{
-              padding: '16px 48px',
-              fontSize: '1.2rem',
-              fontWeight: '600',
-              border: 'none',
-              borderRadius: '12px',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: '#fff',
-              cursor: 'pointer',
-              boxShadow: '0 8px 32px rgba(102,126,234,0.4)',
-            }}
+<button
+  onClick={initializeAudio}
+  onTouchEnd={(e) => {
+    e.preventDefault();
+    initializeAudio();
+  }}
+  style={{
+    padding: '20px 60px',
+    fontSize: '1.3rem',
+    fontWeight: '600',
+    border: 'none',
+    borderRadius: '12px',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    color: '#fff',
+    cursor: 'pointer',
+    boxShadow: '0 8px 32px rgba(102,126,234,0.4)',
+    WebkitTapHighlightColor: 'transparent',
+    touchAction: 'manipulation',
+  }}
           >
             Tap to Start
           </button>
