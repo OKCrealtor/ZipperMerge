@@ -1854,20 +1854,21 @@ function App() {
       )}
 
       {showStartButton && (
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0, 0, 0, 0.95)',
-            backdropFilter: 'blur(10px)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 10000,
-            gap: '24px',
-          }}
-        >
+<div
+  style={{
+    position: 'fixed',
+    inset: 0,
+    background: 'rgba(0, 0, 0, 0.95)',
+    backdropFilter: 'blur(10px)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 10000,
+    gap: '24px',
+    touchAction: 'none',  // ← ADD THIS LINE
+  }}
+>
           <div style={{ fontSize: '4rem' }}>🎮</div>
           <h2 style={{ fontSize: '2rem', margin: 0, color: '#fff' }}>ZipperMerge</h2>
 <button
